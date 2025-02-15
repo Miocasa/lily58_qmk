@@ -1,6 +1,8 @@
 {
-    "name": "Miocasa's Lily58",
+    "name": "Lily58",
     "lighting": "vialrgb",
+    "vid": "0x616C",
+    "pid": "0x4C4C",
     "matrix": {
         "cols": 6,
         "rows": 10
