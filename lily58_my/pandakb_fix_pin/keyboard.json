@@ -8,9 +8,6 @@
         "pid": "0xEB2D",
         "device_version": "1.0.0"
     },
-    "features": {
-        "oled": true
-    },
     "matrix_pins": {
         "cols": [ 27, 26, 22, 20, 23, 16 ],
         "rows": [  5,  6,  7,  8,  9 ]

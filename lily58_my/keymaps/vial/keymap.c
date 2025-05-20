@@ -18,8 +18,6 @@
 
 #include QMK_KEYBOARD_H
 
-#include "keymap_uk.h"
-#include "keymap_russian.h"
 
 extern uint8_t is_master;
 
