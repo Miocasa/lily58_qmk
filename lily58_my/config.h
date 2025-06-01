@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifdef OLED_ENABLE
 #    define OLED_DISPLAY_128X32
 #    define SPLIT_OLED_ENABLE
-#    define OLED_FONT_H "keyboards/lily58_my/lib/glcdfont.c"
+#    define OLED_FONT_H "lily58_my/lib/glcdfont.c"
 #endif
 
 /* Set 0 if debouncing isn't needed */
@@ -47,7 +47,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define SPLIT_TRANSPORT_MIRROR
     #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
     #define RGB_MATRIX_KEYPRESSES
-    #define RGB_DISABLE_WHEN_USB_SUSPENDED
+    #define RGB_MATRIX_SLEEP
     #define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_CYCLE_LEFT_RIGHT
 
     #define ENABLE_RGB_MATRIX_ALPHAS_MODS         // Static dual hue, speed is hue for secondary hue
