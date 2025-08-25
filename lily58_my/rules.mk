@@ -45,4 +45,3 @@ LTO_ENABLE = yes
 # Deprecated features
 # DEFAULT_FOLDER = lily58_my/pandakb
 # VIAL_ENABLE = yes
-
