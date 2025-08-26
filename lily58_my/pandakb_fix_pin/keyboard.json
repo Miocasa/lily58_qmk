@@ -4,7 +4,7 @@
     "url": "https://github/Miocasa",
     "maintainer": "Miocasa",
     "usb": {
-        "vid": "0x04D8",
+        "vid": "0x04D6",
         "pid": "0xEB2D",
         "device_version": "1.0.0"
     },
