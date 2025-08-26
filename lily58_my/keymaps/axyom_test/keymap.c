@@ -196,7 +196,7 @@ bool oled_task_user(void) {
     gui_state_t t = get_gui_state();
 
     // in sleep mode => turn display off
-    if (t == __SLEEP) {
+    if (t == _SLEEP) {
         oled_off();
         return false;
     }

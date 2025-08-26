@@ -27,7 +27,6 @@ static bool IsIdle(void) { return false; }
 static bool IsSleep(void) { return false; }
 static bool IsHalting(void) { return false; }
 
-
 gui_state_t get_gui_state(void) {
     // get gui states by testing timers
     if (IsBooting()) return _BOOTING;

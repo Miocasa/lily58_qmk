@@ -167,7 +167,7 @@ static void draw_lily(uint8_t f) {
 static void draw_startup_navi(uint8_t f) {
     // text
     oled_write_cursor(0, 5, "HELL0", false);
-    oled_write_cursor(0, 7, "Mio.", false);
+    oled_write_cursor(0, 7, "NAVI.", false);
 
     // prompt
     if ((f % 8) > 4) {

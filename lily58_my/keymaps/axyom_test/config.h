@@ -22,7 +22,7 @@
 #define WITH_BOOT
 #define USE_SERIAL_PD2
 
-// #define IS_LEFT // this definition not neaded because firmware can understand which side is it, check main config.h file (work on pandakb's PCB, another PCBs not tested yet)
+// #define IS_LEFT
 
 // custom font
 #ifdef OLED_FONT_H
