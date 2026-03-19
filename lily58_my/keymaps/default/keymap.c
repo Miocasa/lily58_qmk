@@ -18,8 +18,8 @@
 
 #include QMK_KEYBOARD_H
 
-#include "keymap_uk.h"
-#include "keymap_russian.h"
+// #include "keymap_uk.h"
+// #include "keymap_russian.h"
 
 extern uint8_t is_master;
 
@@ -28,16 +28,12 @@ enum layers {
   _LOWER,
   _RAISE,
   _ADJUST,
-<<<<<<< Updated upstream
-  _GAMING
-=======
   _GAMING,
   /// APPs oriented
   _KRITA,
-  _KRITA_ALT,
+  _KRITA_SECOND,
   _PIXELORAMA
 
->>>>>>> Stashed changes
 };
 
 #define RAISE MO(_RAISE)
@@ -124,36 +120,33 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   |      |      |      |/       /         \      \ |      |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
-  [_ADJUST] = LAYOUT(
+[_ADJUST] = LAYOUT(
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, UG_TOGG, UG_HUEU, UG_SATU, UG_VALU,
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, UG_NEXT, UG_HUED, UG_SATD, UG_VALD,
-                             _______, _______, _______, _______, _______,  _______, _______, _______
-  ),
+                       _______, _______, _______, _______, _______,  _______, _______, _______
+),
 /* GAMING
- * ,-----------------------------------------.                    ,-----------------------------------------.
- * | ESC  |   1  |   2  |   3  |   4  |   5  |                    |   6  |   7  |   8  |   9  |   0  |  `   |
- * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | Tab  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |  -   |
- * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |LCTRL |   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |  '   |
- * |------+------+------+------+------+------|   [   |    |    ]  |------+------+------+------+------+------|
- * |LShift|   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  |RShift|
- * `-----------------------------------------/       /     \      \-----------------------------------------'
- *                   | LAlt | LGUI |LOWER | /Space  /       \Enter \  |RAISE |BackSP| RGUI |
- *                   |      |      |      |/       /         \      \ |      |      |      |
- *                   `----------------------------'           '------''--------------------'
- */
+* ,-----------------------------------------.                    ,-----------------------------------------.
+* | ESC  |   1  |   2  |   3  |   4  |   5  |                    |   6  |   7  |   8  |   9  |   0  |  `   |
+* |------+------+------+------+------+------|                    |------+------+------+------+------+------|
+* | Tab  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |  -   |
+* |------+------+------+------+------+------|                    |------+------+------+------+------+------|
+* |LCTRL |   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |  '   |
+* |------+------+------+------+------+------|   [   |    |    ]  |------+------+------+------+------+------|
+* |LShift|   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  |RShift|
+* `-----------------------------------------/       /     \      \-----------------------------------------'
+*                   | LAlt | LGUI |LOWER | /Space  /       \Enter \  |RAISE |BackSP| RGUI |
+*                   |      |      |      |/       /         \      \ |      |      |      |
+*                   `----------------------------'           '------''--------------------'
+*/
 
- [_GAMING] = LAYOUT(
+[_GAMING] = LAYOUT(
   KC_ESC,   KC_1,   KC_2,    KC_3,    KC_4,    KC_5,                     KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_GRV,
   KC_TAB,   KC_Q,   KC_W,    KC_E,    KC_R,    KC_T,                     KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_MINS,
   KC_LCTL,  KC_A,   KC_S,    KC_D,    KC_F,    KC_G,                     KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
   KC_LSFT,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B, KC_LBRC,  KC_RBRC,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,  KC_RSFT,
-<<<<<<< Updated upstream
-                             KC_LALT, KC_LGUI,LOWER, KC_SPC,   KC_ENT,   RAISE,   KC_BSPC, KC_RGUI
-=======
                            KC_LALT, KC_LGUI,KC_SPC, KC_SPC,   KC_ENT,  KC_SPC,   KC_BSPC, KC_RGUI
 ),
 [_KRITA] = LAYOUT(
@@ -163,20 +156,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
                        _______, _______, _______, _______, _______,  _______, _______, _______
 ),
-[_KRITA_ALT] = LAYOUT(
+  [_KRITA_SECOND] = LAYOUT(
   _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______,
   _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______,
   _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______,
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
                        _______, _______, _______, _______, _______,  _______, _______, _______
 ),
-[_PIXELORAMA] = LAYOUT(
+  [_PIXELORAMA] = LAYOUT(
   _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______,
   _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______,
   _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______,
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
                        _______, _______, _______, _______, _______,  _______, _______, _______
->>>>>>> Stashed changes
 ),
 };
 
@@ -891,7 +883,7 @@ void arasaka_text_clean(void)
 
 void arasaka_text_glitch_dirty(void)
 {
-  oled_write_raw_P(text_glitch_dirty[rand() % text_glitch_dirty_count], frame_size);
+   oled_write_raw(text_glitch_dirty[rand() % text_glitch_dirty_count], frame_size);
 }
 
 void arasaka_text_glitch(bool can_be_dirty)
@@ -1176,29 +1168,55 @@ void render_layer_state(void) {
         0x20, 0xbd, 0xbe, 0xbf, 0x20,
         0x20, 0xdd, 0xde, 0xdf, 0x20, 0};
 
+    // 'krita_layer', 32x24px
+    static const char PROGMEM krita_layer[] = {
+        0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xcc, 0x1c, 0x38, 0x70, 0xe4, 0xc4, 0xc4, 0x82, 0x82, 0x01,
+        0x01, 0x02, 0x02, 0x04, 0x04, 0x04, 0x08, 0x10, 0x20, 0xc0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+        0x00, 0x00, 0x00, 0x00, 0x18, 0x66, 0x81, 0x00, 0x00, 0x00, 0x01, 0x07, 0x0f, 0x1f, 0x1f, 0x1f,
+        0x3e, 0x70, 0xe0, 0xc0, 0x80, 0x00, 0x00, 0x00, 0x00, 0x81, 0x66, 0x18, 0x00, 0x00, 0x00, 0x00,
+        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x04, 0x08, 0x10, 0x20, 0x20, 0x20, 0x40, 0x40, 0x80,
+        0x80, 0x40, 0x48, 0x2e, 0x2f, 0x27, 0x10, 0x08, 0x04, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+    };
+    // 'krita_layer_alt', 32x24px
+    static const char PROGMEM krita_layer_alt[] = {
+        0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xcc, 0xdc, 0x38, 0x70, 0xec, 0xdc, 0xdc, 0xa6, 0xa6, 0x19,
+    0x99, 0x66, 0x66, 0x9c, 0x9c, 0x64, 0x68, 0x90, 0xa0, 0xc0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+    0x00, 0x00, 0x00, 0x00, 0x18, 0x66, 0x99, 0x99, 0x66, 0x66, 0x99, 0x97, 0x6f, 0x5f, 0x9f, 0x9f,
+    0x3e, 0x70, 0xe6, 0xd9, 0x99, 0x66, 0x66, 0x99, 0x99, 0xe7, 0x66, 0x18, 0x00, 0x00, 0x00, 0x00,
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x05, 0x0e, 0x16, 0x39, 0x39, 0x26, 0x66, 0x59, 0x99,
+    0xe6, 0x66, 0x68, 0x2e, 0x2f, 0x27, 0x10, 0x0d, 0x07, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+    };
+    static const char PROGMEM pixelorama_layer[] = {
+        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xe0, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20,
+        0x20, 0x20, 0xa0, 0xa0, 0x20, 0x20, 0xe0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xff, 0xe0, 0xf3, 0xf6, 0xfb, 0xf8, 0xf0,
+        0xe0, 0xc3, 0x84, 0xc4, 0xe3, 0xe0, 0xff, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07, 0x07, 0x07, 0x07, 0x07, 0x07, 0x07,
+        0x07, 0x07, 0x07, 0x07, 0x07, 0x07, 0x07, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+    };
     switch (get_highest_layer(layer_state | default_layer_state)) {
         case _LOWER:
+            // oled_write_P(lower_layer, false);
             oled_write_P(lower_layer, false);
             break;
         case _RAISE:
+            // oled_write_P(raise_layer, false);
             oled_write_P(raise_layer, false);
             break;
         case _ADJUST:
+            // oled_write_P(adjust_layer, false);
             oled_write_P(adjust_layer, false);
             break;
-<<<<<<< Updated upstream
-=======
         case _KRITA:
             // oled_set_cursor(0, 5);
             oled_write_raw_P(krita_layer, sizeof(krita_layer));
             break;
-        case _KRITA_ALT:
+        case _KRITA_SECOND:
             oled_write_raw_P(krita_layer_alt, sizeof(krita_layer_alt));
             break;
         case _PIXELORAMA:
             oled_write_raw_P(pixelorama_layer, sizeof(pixelorama_layer));
             break;
->>>>>>> Stashed changes
         default:
             oled_write_P(default_layer, false);
     }
@@ -1213,9 +1231,14 @@ bool oled_task_kb(void) {
         // Renders the current keyboard state (layers and mods)
         render_logo();
         render_logo_text();
-        render_space();
+
+
+        // render_space();
+        oled_set_cursor(0, 6);
         render_layer_state();
-        render_space();
+        // render_space();
+        oled_set_cursor(0, 10);
+
         render_mod_status_gui_alt(get_mods());
         render_mod_status_ctrl_shift(get_mods());
         render_kb_LED_state();
@@ -1237,12 +1260,9 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [_RAISE] = { ENCODER_CCW_CW(_______, _______), ENCODER_CCW_CW(_______, _______) },
     [_ADJUST] = { ENCODER_CCW_CW(_______, _______), ENCODER_CCW_CW(_______, _______) },
     [_GAMING] = { ENCODER_CCW_CW(_______, _______), ENCODER_CCW_CW(_______, _______) },
-<<<<<<< Updated upstream
-=======
     [_KRITA] = { ENCODER_CCW_CW(_______, _______), ENCODER_CCW_CW(_______, _______) },
-    [_KRITA_ALT] = { ENCODER_CCW_CW(_______, _______), ENCODER_CCW_CW(_______, _______) },
+    [_KRITA_SECOND] = { ENCODER_CCW_CW(_______, _______), ENCODER_CCW_CW(_______, _______) },
     [_PIXELORAMA] = { ENCODER_CCW_CW(_______, _______), ENCODER_CCW_CW(_______, _______) }
->>>>>>> Stashed changes
 };
 #else
 bool encoder_update_user(uint8_t index, bool clockwise) {
